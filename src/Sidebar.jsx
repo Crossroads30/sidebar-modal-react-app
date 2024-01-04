@@ -9,7 +9,7 @@ const Sidebar = () => {
 		useGlobalContext()
 
 	return (
-		<div className={!showSidebar ? 'sidebar' : 'sidebar show-sidebar'}>
+		<aside className={!showSidebar ? 'sidebar' : 'sidebar show-sidebar'}>
 			<div className='sidebar-header'>
 				<img className='logo' src={logo} alt='logo' />
 				<button onClick={() => setShowSidebar(false)} className='close-btn'>
@@ -39,7 +39,7 @@ const Sidebar = () => {
 					)
 				})}
 			</ul>
-		</div>
+		</aside>
 	)
 }
 

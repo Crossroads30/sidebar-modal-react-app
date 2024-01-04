@@ -5,15 +5,11 @@ import Home from './Home'
 
 function App() {
 	return (
-		<main>
+		<>
 			<Home />
-			<section className='section'>
-				<Sidebar />
-			</section>
-			<section className='section'>
-				<Modal />
-			</section>
-		</main>
+			<Sidebar />
+			<Modal />
+		</>
 	)
 }
 
