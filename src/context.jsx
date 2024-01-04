@@ -1,18 +1,19 @@
 import React, { useState, useContext, createContext } from 'react'
 
-const GlobalContext = createContext()
+const AppContext = createContext()
 
-export const useGlobalContext = () => useContext(GlobalContext)
+//custom hook
+export const useGlobalContext = () => useContext(AppContext)
 
-const AppContext = ({children}) => {
-  const [showSidebar, setShowSidebar] = useState(false)
+const AppProvider = ({children}) => {
+	const [showSidebar, setShowSidebar] = useState(false)
   const [showModal, setShowModal] = useState(false)
   return (
-		<GlobalContext.Provider
+		<AppContext.Provider
 			value={{ showSidebar, setShowSidebar, showModal, setShowModal }}
 		>
 			{children}
-		</GlobalContext.Provider>
+		</AppContext.Provider>
 	)
 }
-export default AppContext
+export { AppContext, AppProvider }
