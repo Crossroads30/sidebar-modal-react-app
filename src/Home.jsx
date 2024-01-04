@@ -6,14 +6,14 @@ const Home = () => {
 	// const data = useContext(AppContext)
 	// console.log(data)
 
-	const { setShowSidebar, setShowModal } = useGlobalContext()
+	const { openSidebar, openModal } = useGlobalContext()
 
 	return (
 		<main>
-			<button onClick={() => setShowSidebar(true)} className='sidebar-toggle'>
+			<button onClick={openSidebar} className='sidebar-toggle'>
 				<FaBars />
 			</button>
-			<button onClick={() => setShowModal(true)} className='btn' type='button'>
+			<button onClick={openModal} className='btn' type='button'>
 				show modal
 			</button>
 		</main>
