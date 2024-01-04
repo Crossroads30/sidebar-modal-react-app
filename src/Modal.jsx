@@ -1,7 +1,16 @@
 import React from 'react'
 import { FaTimes } from 'react-icons/fa'
 const Modal = () => {
-  return <h2>Modal</h2>
+	return (
+		<div className='modal-overlay'>
+			<div className='modal-container'>
+				<button className='close-modal-btn' type='button'>
+					<FaTimes />
+				</button>
+				<h3>modal content</h3>
+			</div>
+		</div>
+	)
 }
 
 export default Modal
