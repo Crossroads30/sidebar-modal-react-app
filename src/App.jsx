@@ -2,10 +2,8 @@ import React from 'react'
 import Modal from './Modal'
 import Sidebar from './Sidebar'
 import Home from './Home'
-import { useGlobalContext } from './context'
+
 function App() {
-  const { showSidebar, setShowSidebar, showModal, setShowModal } =
-		useGlobalContext()
 	return (
 		<main>
 			<Home />
